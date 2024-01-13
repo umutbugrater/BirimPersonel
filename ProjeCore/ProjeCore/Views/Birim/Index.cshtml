@@ -1,0 +1,32 @@
+﻿@model List<Birim>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Birim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.BirimID</td>
+            <td>@x.BirimAd</td>
+            <td> <a asp-action="BirimSil" asp-route-id="@x.BirimID" class="btn btn-danger">Sil</a> </td>
+            @* <td> <a href="birim/BirimSil/@x.ID" class="btn btn-danger">Sil</a> </td> *@
+            <td> <a asp-action="BirimGetir" asp-route-id="@x.BirimID" class="btn btn-success">Güncelle</a>  </td>
+            <td> <a asp-action="BirimDetay" asp-route-id="@x.BirimID" class="btn btn-default" style="background-color:#dee61d">Detaylar</a>  </td>
+        </tr>
+    }
+
+</table>
+
+<td> <a asp-action="YeniBirim" class="btn btn-primary">Yeni Birim</a>  </td>
+
+

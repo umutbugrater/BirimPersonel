@@ -39,5 +39,40 @@ namespace ProjeCore.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult PersonelSil(int id)
+        {
+            c.Personels.Remove(c.Personels.Find(id));
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult PersonelGuncelle(int id)
+        {
+            var value = c.Personels.Find(id);
+
+            List<SelectListItem> degerler = (from x in c.Birims.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = x.BirimAd,
+                                                 Value = x.BirimID.ToString()
+                                             }
+                                             ).ToList();
+            ViewBag.dgr = degerler;
+            return View(value);
+        }
+
+        [HttpPost]
+        public IActionResult PersonelGuncelle(Personel p)
+        {
+            var value = c.Personels.Find(p.PersonelID);
+            value.Ad = p.Ad;
+            value.Soyad = p.Soyad;
+            value.Sehir = p.Sehir;
+            value.BirimID = p.Birim.BirimID;
+            c.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

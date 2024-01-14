@@ -25,9 +25,9 @@
             <td>@x.Soyad</td>
             <td>@x.Sehir</td>
             <td>@x.Birim.BirimAd</td>
-            <td> <a asp-action="DepartmanSil" asp-route-id="@x.PersonelID" class="btn btn-danger">Sil</a> </td>
+            <td> <a asp-action="PersonelSil" asp-route-id="@x.PersonelID" class="btn btn-danger">Sil</a> </td>
             @* <td> <a href="depart/DepartmanSil/@x.ID" class="btn btn-danger">Sil</a> </td> *@
-            <td> <a asp-action="DepartmanGetir" asp-route-id="@x.PersonelID" class="btn btn-success">Güncelle</a>  </td>
+            <td> <a asp-action="PersonelGuncelle" asp-route-id="@x.PersonelID" class="btn btn-success">Güncelle</a>  </td>
         </tr>
     }
 

@@ -1,0 +1,27 @@
+﻿@model Personel
+
+@{
+    ViewData["Title"] = "PersonelGuncelle";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>PersonelGuncelle</h1>
+
+<form class="form-group" method="post">
+    @Html.HiddenFor(x=>x.PersonelID, new {@class="form-control"})
+
+    <b>PERSONEL ADI</b>
+    @Html.TextBoxFor(x=>x.Ad, new {@class="form-control"})
+    <br />
+    <b>PERSONEL SOYADI</b>
+    @Html.TextBoxFor(x=>x.Soyad, new {@class="form-control"})
+    <br />
+    <b>ŞEHİR</b>
+    @Html.TextBoxFor(x=>x.Sehir, new {@class="form-control"})
+    <br />
+    <b>BİRİM</b>
+    @Html.DropDownListFor(x=>x.Birim.BirimID,(List<SelectListItem>)ViewBag.dgr, new {@class="form-control"})
+    <br />
+
+    <button class="btn btn-info" style="color:white">Birim Güncelle </button>
+</form>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dMT+dNuedQ0KuQsbBFFV0MuHonkhCPEkav2uVS5ZS5XD2nq0tK8pgzf0xISVf9rOw9Pml30B8Gkr2Jl7HikZBQ==",
+  "dgSpecHash": "neaMpkhw/ZuueKV+dQNDqxMJa5mkWrzTJPWR054aEuYHI/dkQ2aVs6S1eHftjyc01iSku8xyvPw+nFkXb7jkag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\umutb\\source\\repos\\MCSD\\Youtube_MuratYücedağ\\CoreAndFood\\ProjeCore\\ProjeCore\\ProjeCore.csproj",
+  "projectFilePath": "C:\\Users\\umutb\\Documents\\GitHub\\BirimPersonel\\ProjeCore\\ProjeCore\\ProjeCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\umutb\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\umutb\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
